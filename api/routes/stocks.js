@@ -6,18 +6,18 @@ const Stock=require('../models/stock');
 
 // router, stock controller
 router.get('/',(req,res,next)=>{
-    // var data=null;
-    // Stock.find().exec().then(doc=>{ 
-    //     res.status(200).json({
-    //         message: "handling GET req of products",
-    //         data:doc
-    //      })
-
-    // }).catch(error=>{console.log(error)});
-     res.status(200).json({
+    var data=null;
+    Stock.find().exec().then(doc=>{ 
+        res.status(200).json({
             message: "handling GET req of products",
-            
+            data:doc
          })
+
+    }).catch(error=>{console.log(error)});
+//      res.status(200).json({
+//             message: "handling GET req of products",
+            
+//          })
     
 });
 router.get("/:stId",(req,res,next)=>{
