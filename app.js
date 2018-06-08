@@ -8,8 +8,8 @@ const morgan = require("morgan");
 // middlewares
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(bodyparser.json());
-mongoose.connect('mongodb://devangtyagi:Cryptonite_11@galaxy-invoicer-shard-00-00-oo0f9.mongodb.net:27017,galaxy-invoicer-shard-00-01-oo0f9.mongodb.net:27017,galaxy-invoicer-shard-00-02-oo0f9.mongodb.net:27017/test?ssl=true&replicaSet=galaxy-invoicer-shard-0&authSource=admin&retryWrites=true');
-
+// mongoose.connect('mongodb://devangtyagi:Cryptonite_11@galaxy-invoicer-shard-00-00-oo0f9.mongodb.net:27017,galaxy-invoicer-shard-00-01-oo0f9.mongodb.net:27017,galaxy-invoicer-shard-00-02-oo0f9.mongodb.net:27017/test?ssl=true&replicaSet=galaxy-invoicer-shard-0&authSource=admin&retryWrites=true');
+mongoose.connect('mongodb://devtg:Xeonite@mongodb/invoicerDb');
 //CORS HANDLER
 app.use(morgan("dev"));  
 app.use((req,res,next)=>{
