@@ -13,8 +13,8 @@ var username=process.env.db_username;
 var password=process.env.db_password;
 
 //mongoose.connect('mongodb://devangtyagi:Cryptonite_11@galaxy-invoicer-shard-00-00-oo0f9.mongodb.net:27017,galaxy-invoicer-shard-00-01-oo0f9.mongodb.net:27017,galaxy-invoicer-shard-00-02-oo0f9.mongodb.net:27017/test?ssl=true&replicaSet=galaxy-invoicer-shard-0&authSource=admin&retryWrites=true');
-mongoose.connect('mongodb://'+username+':'+password+'@MONGODB_SERVICE_HOST:27017&retryWrites=true');
-console.log(process.env);
+mongoose.connect('mongodb://userSET:X7IDmbtpId0jNsft@mongodb/invoicerdb');
+
 //CORS HANDLER
 app.use(morgan("dev"));  
 app.use((req,res,next)=>{
